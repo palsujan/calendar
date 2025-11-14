@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Calendar.module.css";
+import styles from "./WeekRow.module.css";
 import { isSameDay } from "./utils";
 
 type WeekRowProps = {
