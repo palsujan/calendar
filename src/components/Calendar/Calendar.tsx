@@ -3,7 +3,7 @@ import styles from "./Calendar.module.css";
 import { CalendarProps } from "./types";
 import { WEEK_DAYS, getMonthName, generateMonthMatrix, isSameDay } from "./utils";
 
-export default function Calendar({ date, renderDateCell }: CalendarProps) {
+const Calendar = ({ date, renderDateCell }: CalendarProps) => {
   const monthName = getMonthName(date);
   const year = date.getFullYear();
   const matrix = generateMonthMatrix(date);
@@ -58,3 +58,5 @@ export default function Calendar({ date, renderDateCell }: CalendarProps) {
     </div>
   );
 }
+
+export default  Calendar;

@@ -1,4 +1,4 @@
-// src/components/Calendar/utils.ts
+
 export const WEEK_DAYS = ["Su","Mo","Tu","We","Th","Fr","Sa"];
 
 export function getMonthName(date: Date, locale?: string) {
@@ -36,6 +36,4 @@ export function isSameDay(a: Date | null, b: Date | null) {
     a.getDate() === b.getDate()
   );
 }
-
-// ✅ Fix isolatedModules complaint
 export {};
