@@ -1,11 +1,11 @@
 
 export const WEEK_DAYS = ["Su","Mo","Tu","We","Th","Fr","Sa"];
 
-export function getMonthName(date: Date, locale?: string) {
+export const getMonthName = (date: Date, locale?: string) => {
   return date.toLocaleString(locale ?? undefined, { month: "long" });
 }
 
-export function generateMonthMatrix(forDate: Date): (Date | null)[][] {
+export const generateMonthMatrix = (forDate: Date): (Date | null)[][] => {
   const year = forDate.getFullYear();
   const month = forDate.getMonth();
   const firstOfMonth = new Date(year, month, 1);
@@ -28,7 +28,7 @@ export function generateMonthMatrix(forDate: Date): (Date | null)[][] {
   return weeks;
 }
 
-export function isSameDay(a: Date | null, b: Date | null) {
+export const isSameDay = (a: Date | null, b: Date | null) => {
   if (!a || !b) return false;
   return (
     a.getFullYear() === b.getFullYear() &&
