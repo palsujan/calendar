@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// import './App.css';
+import Calendar from './components/Calendar/Calendar';
 
 function App() {
+    function dateYMD(y: number, m: number, d: number) {
+    return new Date(y, m - 1, d); // so you can use a 1-based month
+  }
+  const sample = dateYMD(2025, 11, 16);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Calendar date={sample} />
     </div>
   );
 }
