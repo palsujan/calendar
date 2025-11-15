@@ -12,9 +12,11 @@ Folder Structure
 /components/Calendar
 
 - │── Calendar.tsx
+- │── WeekRow.tsx
 - │── utils.ts
 - │── types.ts
 - │── Calendar.module.css
+- │── Calendar.test.tsx
 
 ## Key Features
 
